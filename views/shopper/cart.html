@@ -1,1 +1,30 @@
 <h1>Welcome to your Cart!</h1>
+
+<div ng-repeat ="item in cartItems">
+  <div class="entry">
+  <div class="row">
+  <div class="col-md-12"><img ng-src="{{item.image}}"></div>
+  </div>
+  <div class="row">
+  <div class="col-md-12"><h3>{{item.name}}</h3></div>
+  </div>
+  <div class="row">
+  <div class="col-md-12"><h4>{{item.price | currency}}</h4></div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">{{item.description}} </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12"><b>Quantity:</b><input type="number" ng-model="item.quantity" val="item.quantity"></div>
+  </div>
+  <div class="row">
+  <div class="col-md-12"><b>Total:</b>{{item.total | currency}}</div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">Reviews: {{item.reviews}} </div>
+  </div>
+  <p>{{item._id}}</p>
+  <button type="button" class="btn btn-default addButton" ng-click="addToCart(product)" name="button">Add to Cart</button>
+  <button type="button" class="btn btn-default reviewButton" ng-click="reviewProduct(product)" name="button">Review</button>
+  <button type="button" class="btn btn-danger reviewButton" ng-click="removeFromCart(item._id)" name="button">Remove From Cart</button>
+</div>

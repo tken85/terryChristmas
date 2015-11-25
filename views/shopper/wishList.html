@@ -15,6 +15,9 @@
   <div class="col-md-12">{{product.description}} </div>
   </div>
   <div class="row">
+  <div class="col-md-12"><b>Quantity:</b><input type="number" ng-model="product.quantity"></div>
+  </div>
+  <div class="row">
   <div class="col-md-12">Reviews: {{product.reviews}} </div>
   </div>
   <button type="button" class="btn btn-default addButton" ng-click="addToCart(product)" name="button">Add to Cart</button>

@@ -36,5 +36,21 @@
         $scope.products = products;
       });
 
+      ShopperService.getCart().success(function(cartItems){
+        $scope.cartItems = cartItems;
+      });
+      $scope.addToCart = function(newProduct){
+        newProduct.total = newProduct.price * newProduct.quantity;
+        delete newProduct._id;
+
+        ShopperService.addToCart(newProduct);
+
+      };
+
+      $scope.removeFromCart = function(productId){
+        console.log(productId);
+        ShopperService.removeFromCart(productId);
+      };
+
     });
 }());

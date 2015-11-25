@@ -37,33 +37,45 @@
     .factory('ShopperService', function($http, _){
 
       var url = "http://tiny-tiny.herokuapp.com/collections/terryChristmas";
+      var cartUrl = "http://tiny-tiny.herokuapp.com/collections/terryChristmasCart";
 
-      var addToCart = function(){
-
+      var addToCart = function(newProduct){
+        $http.post(cartUrl, newProduct);
       };
 
       var getProducts = function(){
         return $http.get(url);
       };
+
       var getSingleProduct = function(){
 
       };
 
-      var removeFromCart = function(){
-
+      var getCart = function(){
+        return $http.get(cartUrl);
       };
+
+      var removeFromCart = function(productId){
+        return $http.delete(cartUrl + '/' + productId);
+      };
+
       var calculateTotal = function(){
 
       };
+
       var addReview = function(){
 
       };
+
       var checkOut = function(){
 
       };
 
       return {
-        getProducts: getProducts
+        addToCart: addToCart,
+        getProducts: getProducts,
+        getCart: getCart,
+        removeFromCart: removeFromCart,
       };
     });
 
