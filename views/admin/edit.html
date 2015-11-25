@@ -1,0 +1,9 @@
+<h1>Edit a product</h1>
+
+<form>
+<input type="text" class="form-control" name="name" ng-model="singleProduct.name" value="{{singleProduct.name}}">
+<input type="text" class="form-control" name="image" ng-model="singleProduct.image" value="{{singleProduct.image}}">
+<input type="text" class="form-control" name="description" ng-model="singleProduct.description" value="{{singleProduct.description}}">
+<input type="number" class="form-control" name="price" ng-model="singleProduct.price" value="{{singleProduct.price}}">
+<button type="button" class="btn btn-default addButton" ng-click="updateProduct(singleProduct)" name="button">Submit</button>
+</form>

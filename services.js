@@ -19,7 +19,7 @@
       };
 
       var deleteProduct = function(productId){
-        return $http.delete(url + '/' + postId);
+        return $http.delete(url + '/' + productId);
       };
 
       var updateProduct = function(updatedProduct){

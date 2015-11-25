@@ -25,6 +25,14 @@
           templateUrl: 'views/admin/wishList.html',
           controller: 'AdminController'
         })
+        .when('/admin/viewWishes/:productId',{
+          templateUrl: 'views/admin/show.html',
+          controller: 'AdminController'
+        })
+        .when('/admin/viewWishes/:productId/edit',{
+          templateUrl: 'views/admin/edit.html',
+          controller: 'AdminController'
+        })
         .when('/shopper',{
           templateUrl: 'views/shopper/shopperHome.html',
           controller: 'ShopperController'
