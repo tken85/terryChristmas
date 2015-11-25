@@ -1,0 +1,9 @@
+<h1>Welcome to the Product Portal</h1>
+
+<form>
+<input type="text" class="form-control" name="name" ng-model="newProduct.name" placeholder="Product Name" value="">
+<input type="text" class="form-control" name="image" ng-model="newProduct.image" placeholder = "Image Url" value="">
+<input type="text" class="form-control" name="description" ng-model="newProduct.description" placeholder="Description" value="">
+<input type="number" class="form-control" name="price" ng-model="newProduct.price" placeholder="Price" value="">
+<button type="button" class="btn btn-default addButton" ng-click="addProduct(newProduct)" name="button">Submit</button>
+</form>

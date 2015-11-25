@@ -1,0 +1,20 @@
+<h1>Welcome to the Product List</h1>
+
+<div ng-repeat ="product in products">
+  <div class="entry">
+  <div class="row">
+  <div class="col-md-12"><img ng-src="{{product.image}}"></div>
+  </div>
+  <div class="row">
+  <div class="col-md-12"><h5>{{product.name}}</h5></div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">{{product.price | currency}}</div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">{{product.description}} </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">Reviews: {{product.reviews}} </div>
+  </div>
+</div>

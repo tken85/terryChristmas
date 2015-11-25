@@ -1,0 +1,14 @@
+.row {
+  text-align: center; }
+
+body {
+  text-align: center; }
+
+.entry {
+  padding: 5px;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px auto; }
+  .entry img {
+    width: 30%; }
