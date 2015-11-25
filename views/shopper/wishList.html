@@ -3,7 +3,7 @@
 <div ng-repeat ="product in products">
   <div class="entry">
   <div class="row">
-  <div class="col-md-12"><img ng-src="{{product.image}}"></div>
+  <div class="col-md-12"><a href="#/shopper/viewWishes/{{product._id}}"><img ng-src="{{product.image}}"></a></div>
   </div>
   <div class="row">
   <div class="col-md-12"><h3>{{product.name}}</h3></div>
