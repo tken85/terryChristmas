@@ -47,8 +47,8 @@
         return $http.get(url);
       };
 
-      var getSingleProduct = function(){
-
+      var getSingleProduct = function(productId){
+        return $http.get(url + '/' + productId);
       };
 
       var getCart = function(){
@@ -63,8 +63,8 @@
 
       };
 
-      var addReview = function(){
-
+      var addReview = function(reviewedProduct){
+        return $http.put(url + '/' + reviewedProduct._id, reviewedProduct);
       };
 
       var checkOut = function(){
@@ -75,7 +75,9 @@
         addToCart: addToCart,
         getProducts: getProducts,
         getCart: getCart,
+        getSingleProduct: getSingleProduct,
         removeFromCart: removeFromCart,
+        reviewProduct: addReview,
       };
     });
 

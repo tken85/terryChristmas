@@ -1,0 +1,8 @@
+<h1>Write a review of {{singleProduct.name}}</h1>
+
+<form>
+<input type="text" class="form-control" name="name" ng-model="review.name" placeholder="Your Name" value="">
+<input type="text" class="form-control" name="image" ng-model="review.text" placeholder="Your Review" value="">
+<input type="text" class="form-control" name="description" ng-model="review.rating" placeholder="Rating out of 5" value="">
+<button type="button" class="btn btn-default addButton" ng-click="reviewProduct(singleProduct, review)" name="button">Submit</button>
+</form>

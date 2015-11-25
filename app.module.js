@@ -49,6 +49,10 @@
           templateUrl: 'views/shopper/checkout.html',
           controller: 'ShopperController'
         })
+        .when('/shopper/viewWishes/:productId/review',{
+          templateUrl: 'views/shopper/review.html',
+          controller: 'ShopperController'
+        })
         .when('/404',{
           templateUrl: 'views/404.html',
           controller: 'MainController'
