@@ -1,1 +1,9 @@
 <h1>Welcome to the Checkout</h1>
+<h3>Your Items</h3>
+
+<div ng-repeat ="item in cartItems"></div>
+
+
+<h3>Total: {{total | currency}}</h3>
+<a href="#/shopper/myCart" class="btn btn-primary">Back to Cart</a>
+<a href="#/shopper" ng-click="checkOut()" class = "btn btn-danger">Confirm and Place Order</a>

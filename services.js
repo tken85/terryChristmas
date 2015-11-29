@@ -59,16 +59,24 @@
         return $http.delete(cartUrl + '/' + productId);
       };
 
-      var calculateTotal = function(){
-
+      var calculateTotal = function(purchases){
+        var total = 0;
+        _.each(purchases, function(purchase){
+          total += purchase.total;
+        });
+        return total;
       };
 
       var addReview = function(reviewedProduct){
         return $http.put(url + '/' + reviewedProduct._id, reviewedProduct);
       };
-
-      var checkOut = function(){
-
+      var updateCart = function(updatedProduct){
+        return $http.put(cartUrl + '/' + updatedProduct._id, updatedProduct);
+      };
+      var checkOut = function(cartItems){
+        _.each(cartItems, function(currVal){
+          $http.delete(cartUrl + '/' + currVal._id);
+        });
       };
 
       return {
@@ -78,6 +86,9 @@
         getSingleProduct: getSingleProduct,
         removeFromCart: removeFromCart,
         reviewProduct: addReview,
+        calculateTotal: calculateTotal,
+        checkOut: checkOut,
+        updateCart: updateCart,
       };
     });
 

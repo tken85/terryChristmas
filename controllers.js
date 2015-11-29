@@ -38,6 +38,7 @@
 
       ShopperService.getCart().success(function(cartItems){
         $scope.cartItems = cartItems;
+        $scope.total = ShopperService.calculateTotal(cartItems);
       });
 
       if($routeParams.productId){
@@ -54,6 +55,9 @@
 
       };
 
+      $scope.updateCart = function(product){
+        ShopperService.updateCart(product);
+      };
       $scope.removeFromCart = function(productId){
         console.log(productId);
         ShopperService.removeFromCart(productId);
@@ -61,6 +65,10 @@
       $scope.reviewProduct = function(reviewedProduct, review){
         reviewedProduct.reviews.push(review);
         ShopperService.reviewProduct(reviewedProduct);
+      };
+
+      $scope.checkOut = function(){
+        ShopperService.checkOut($scope.cartItems);
       };
     });
 }());
